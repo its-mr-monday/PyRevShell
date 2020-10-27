@@ -2,7 +2,7 @@
 #IMPORT LIBRARY
 import server_lib as lib
 from GLOBAL import *
-from _crypto import _crypto as Crypto
+from ENCRYPTION import *
 
 def main():
     s = lib.Server(SERV_HOST, ST_PORT, Crypto())

@@ -1,7 +1,7 @@
 
 import client_lib as lib
 from GLOBAL import *
-from _crypto import _crypto as Crypto
+from ENCRYPTION import *
 import socket
 
 def main():

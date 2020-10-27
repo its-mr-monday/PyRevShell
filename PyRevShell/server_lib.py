@@ -1,7 +1,7 @@
 import socket
 import time
 import threading
-from _crypto import _crypto as Crypto
+from ENCRYPTION import *
 
 clients = []
 connections = []
