@@ -7,17 +7,24 @@
 
 import os
 import subprocess
+import platform
 
 class Shell:    #Interactive shell class
-    def __init__(self, sys_type):   #Initialization of the shell class finds the location of a terminal and opens a shell
+    def __init__(self):   #Initialization of the shell class finds the location of a terminal and opens a shell
+        self.os_check()
         self.terminal = ""
-        if sys_type == "Windows":
+        if self.plat == "Windows":
             self.find_powershell(["C:","D:","E:","F:"])
             self.terminal = self.powershell
         else:
             self.temrinal = '/bin/bash'
         self.open_shell()
-            
+    
+    def os_check(self):     #Check the systems operating systen
+        self.plat = platform.system()
+        if self.plat == "Darwin":
+            self.plat = "MacOS"
+        
     def open_shell(self):     #handle for opening a shell after a command has been parsed
         self.shell = subprocess.Popen([self.terminal], shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
