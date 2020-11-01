@@ -27,7 +27,7 @@ class Client:   #client class
         self.port = port
         self.ostype = os_check()
         
-def shell_test():
+def shell_test():   #Debug Function
     sysos = os_check()
     shell = Shell(sysos)
     x = 0
